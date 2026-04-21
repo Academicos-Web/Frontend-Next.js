@@ -24,3 +24,80 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box {
+  background: #1e3a8a;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: gray;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links .active {
+  background: #1e3a8a;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.login-btn {
+  background: #d4a017;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  background: #1e3a8a;
+  color: white;
+  padding: 60px 40px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #cbd5e1;
+}

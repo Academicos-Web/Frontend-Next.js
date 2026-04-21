@@ -1,11 +1,15 @@
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main>
-        <Header />
-      </main>
-    </div>
+    <main className="container">
+      <Header />
+      <h1>Inicio</h1>
+
+      <Link href="/perfil">
+        Ver perfil de profesor
+      </Link>
+    </main>
   );
 }

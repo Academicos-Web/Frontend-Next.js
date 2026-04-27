@@ -1,13 +1,9 @@
-import Link from "next/link";
+import InicioParteFinal from "./Inicio-partefinal/Inicio-partefinal";
 
 export default function Home() {
   return (
-    <main className="container">
-      <h1>Inicio</h1>
-
-      <Link href="/perfil">
-        Ver perfil de profesor
-      </Link>
+    <main>
+      <InicioParteFinal />
     </main>
   );
 }

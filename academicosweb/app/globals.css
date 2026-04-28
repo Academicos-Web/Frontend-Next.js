@@ -1,62 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --primary: #1e3a8a;
+  --primary-light: #1e40af;
+  --accent: #fbbf24;
+  --text: #0f172a;
+  --muted: #64748b;
+  --bg: #f9f8f1;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   BASE
+========================= */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: #f9f8f1; /* 🔥 clave para look moderno */
-  color: #0f172a;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-/* CONTENEDOR */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem; /* 🔥 más aire */
-}
-
-/* TITULOS */
 h2 {
   font-size: 1.4rem;
-  margin-bottom: 0.5rem;
 }
 
 h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #1e3a8a; /* 🔥 azul como en la UI */
+  color: var(--primary);
 }
 
 h4 {
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--muted);
 }
 
-/* TEXTO */
 p {
   line-height: 1.5;
   color: #334155;
 }
 
-/* LISTAS */
 ul {
   list-style: none;
 }
 
-li {
-  margin-bottom: 4px;
-  color: #334155;
-}
-
-/* BOTONES */
 button {
   font-family: inherit;
   transition: all 0.2s ease;
@@ -67,7 +62,261 @@ button:hover {
   opacity: 0.95;
 }
 
-/* SOMBRAS GLOBALES */
-:root {
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
+
+/* =========================
+   SECCIÓN PRINCIPAL
+========================= */
+.inicio-partefinal {
+  padding: 40px 6%;
+  background: #ffffff;
+}
+
+.inicio-partefinal .contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.inicio-partefinal .badge {
+  background: #fef3c7;
+  color: #b45309;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.inicio-partefinal h2 {
+  font-size: 36px;
+  color: var(--primary);
+  margin: 15px 0;
+}
+
+.inicio-partefinal p {
+  color: #6b7280;
+}
+
+.inicio-partefinal li {
+  margin-bottom: 12px;
+  color: #374151;
+}
+
+.inicio-partefinal .imagen {
+  position: relative;
+}
+
+.inicio-partefinal img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.inicio-partefinal .card-float {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.card-float strong {
+  font-size: 20px;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta {
+  background: linear-gradient(to right, var(--primary), var(--primary-light));
+  color: white;
+  text-align: center;
+  padding: 40px 16px;
+}
+
+.cta h2 {
+  font-size: 32px;
+}
+
+.cta p {
+  margin-top: 15px;
+  color: #d1d5db;
+}
+
+.botones {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #f59e0b;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--primary);
+}
+
+/* =========================
+   FILTROS
+========================= */
+.filtrosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.filtrosGrid input,
+.filtrosGrid select {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  background-color: #fff;
+}
+
+.filtrosGrid input:focus,
+.filtrosGrid select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* =========================
+   CARD (UNIFICADA)
+========================= */
+.card {
+  width: 350px;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: #fff;
+}
+
+.card-header {
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-info h3 {
+  margin: 0;
+}
+
+.stars {
+  color: #f1c40f;
+}
+
+.evals {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.card-body {
+  padding: 0 20px 20px;
+}
+
+.subjects {
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background: #e8f0fe;
+  color: #1967d2;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .inicio-partefinal .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   TAILWIND
+========================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

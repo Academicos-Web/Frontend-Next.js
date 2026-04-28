@@ -1,26 +1,28 @@
+import { LogIn, Compass, TrendingUp, PenLine } from "lucide-react";
+
 export default function ComoFunciona() {
   const pasos = [
     {
       numero: "01",
-      icono: "⊣",
+      icono: <LogIn size={16}/>,
       titulo: "Inicia Sesión",
       descripcion: "Accede con tu correo institucional de la UNAM para garantizar la seguridad de la comunidad.",
     },
     {
       numero: "02",
-      icono: "⊙",
+      icono: <Compass size={16}/>,
       titulo: "Explora",
       descripcion: "Busca profesores por nombre, materia o semestre en el directorio completo de la carrera.",
     },
     {
       numero: "03",
-      icono: "↗",
+      icono: <TrendingUp size={16}/>,
       titulo: "Consulta",
       descripcion: "Revisa estadísticas, evaluaciones detalladas y comentarios de otros estudiantes.",
     },
     {
       numero: "04",
-      icono: "✎",
+      icono: <PenLine size={16}/>,
       titulo: "Evalúa",
       descripcion: "Comparte tu experiencia de forma anónima y contribuye a la mejora continua.",
     },
@@ -44,7 +46,7 @@ export default function ComoFunciona() {
         }}>
           Proceso
         </span>
-        <h2 style={{ fontSize: "2.5rem", fontWeight: 700, color: "#111827", margin: "0 0 12px 0" }}>
+        <h2 style={{ fontSize: "2.5rem", fontWeight: 700, color: "#1e3a8a", margin: "0 0 12px 0" }}>
           ¿Cómo funciona?
         </h2>
         <p style={{ color: "#6B7280", fontSize: "15px", margin: 0 }}>
@@ -93,7 +95,7 @@ export default function ComoFunciona() {
               </div>
 
               {/* Título */}
-              <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#111827", margin: "0 0 12px 0" }}>
+              <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#1e3a8a", margin: "0 0 12px 0" }}>
                 {paso.titulo}
               </h3>
 

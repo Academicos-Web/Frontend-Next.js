@@ -110,7 +110,6 @@ button:hover {
   color: #374151;
 }
 
-/* IMAGEN */
 .inicio-partefinal .imagen {
   position: relative;
 }
@@ -120,7 +119,6 @@ button:hover {
   border-radius: 12px;
 }
 
-/* CARD FLOTANTE */
 .inicio-partefinal .card-float {
   position: absolute;
   bottom: 20px;
@@ -161,7 +159,6 @@ button:hover {
   gap: 15px;
 }
 
-/* BOTONES */
 .btn-primary {
   background: var(--accent);
   border: none;

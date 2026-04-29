@@ -1,20 +1,13 @@
 import ComoFunciona from "./components/ComoFunciona";
 import ProfesoresMejorEvaluados from "./components/ProfesoresMejorEvaluados";
-import Header from "@/components/Header";
-import Link from "next/link";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
-    <main className="container">
+    <main>
       <Header />
-      <h1>Inicio</h1>
-
-      <Link href="/perfil">
-        Ver perfil de profesor 
-        </Link>
       <ComoFunciona />
       <ProfesoresMejorEvaluados />
     </main>
   );
 }
-

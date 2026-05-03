@@ -1,0 +1,138 @@
+.footer {
+  background: #f5f2ea;
+  padding: 60px 8%;
+  margin-top: 80px;
+  border-top: 1px solid #ddd;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 50px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoBox {
+  width: 42px;
+  height: 42px;
+
+  background: #1e3a8a;
+  color: white;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.brandSection h3 {
+  color: #1e3a8a;
+  font-size: 18px;
+}
+
+.brandSection p {
+  color: #666;
+}
+
+.description {
+  margin-top: 20px;
+  line-height: 1.7;
+  max-width: 350px;
+}
+
+.footer h4 {
+  margin-bottom: 18px;
+  color: #1e3a8a;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #444;
+  transition: 0.25s;
+}
+
+.links a:hover {
+  color: #1e3a8a;
+}
+
+.newsText {
+  margin-bottom: 15px;
+}
+
+.newsletter {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  flex: 1;
+
+  padding: 12px;
+
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+  outline: none;
+}
+
+.newsletter input:focus {
+  border-color: #1e3a8a;
+}
+
+.newsletter button {
+  background: #1e3a8a;
+  color: white;
+
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.newsletter button:hover {
+  background: #163172;
+}
+
+.bottomBar {
+  margin-top: 50px;
+  padding-top: 25px;
+
+  border-top: 1px solid #d6d3d1;
+
+  color: #777;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+}

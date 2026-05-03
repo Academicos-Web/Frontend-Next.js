@@ -6,37 +6,43 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
 
-  const getClass = (path: string): string => {
-    return pathname === path ? "active" : "";
-  };
+  const navItems = [
+    { name: "Inicio", path: "/inicio" },
+    { name: "Directorio", path: "/directorio" },
+    { name: "Comparador", path: "/comparador" },
+  ];
 
   return (
-    <nav className="navbar">
-      <div className="logo">
+    <header className="navbar">
+      {/* LOGO */}
+      <div className="logo-container">
         <div className="logo-box">M</div>
+
         <div>
-          <p className="title">Evaluación Docente</p>
-          <span className="subtitle">MAC - FES Acatlán</span>
+          <h1 className="logo-title">Evaluación Docente</h1>
+          <p className="logo-subtitle">MAC - FES Acatlán</p>
         </div>
       </div>
 
-      <div className="nav-links">
-        <Link href="/inicio" className={getClass("/inicio")}>
-          Inicio
-        </Link>
+      {/* NAVEGACIÓN */}
+      <nav className="nav-links">
+        {navItems.map((item) => (
+          <Link
+            key={item.path}
+            href={item.path}
+            className={`nav-button ${
+              pathname === item.path ? "active" : ""
+            }`}
+          >
+            {item.name}
+          </Link>
+        ))}
 
-        <Link href="/directorio" className={getClass("/directorio")}>
-          Directorio
+        {/* LOGIN */}
+        <Link href="/login" className="login-button">
+          Iniciar Sesión
         </Link>
-
-        <Link href="/comparador" className={getClass("/comparador")}>
-          Comparador
-        </Link>
-
-        <Link href="/login">
-          <button className="login-btn">Iniciar Sesión</button>
-        </Link>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }

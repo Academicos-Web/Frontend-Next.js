@@ -1,14 +1,15 @@
-import CajaDocente from "./Components/CajaDocente/CajaDocente.tsx";
+import CajaDocente from "./CajaDocente/CajaDocente/CajaDocente.js";
 
 export default function Home() {
   return (
-    <CajaDocente />
+    <div style={{ display: 'flex', gap: '20px', padding: '40px' }}>
+      <CajaDocente 
+        nombre="Armando (yo)"
+        materias={["Desarrollo web", "Optimizacion"]}
+        evaluacion={100}
+        imagen="/perfil1.jpg"
+      />
+    </div>
   );
 }
 
-import styles from './Components/CajaDocente/CajaDocente.module.css';
-
-export default function CajaDocente() {
-  return (
-    <div className={styles.card}> </div>
-}

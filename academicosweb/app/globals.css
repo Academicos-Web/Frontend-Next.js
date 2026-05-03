@@ -319,3 +319,215 @@ button:hover {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* ========== VARIABLES ========== */
+:root {
+  --color-primario: #1d1e33;
+  --color-primario-oscuro: #a39b1e;
+  --color-texto: #1d1e33;
+  --color-texto-claro: #fbf7cb;
+  --fondo: #f9fafb;
+  --blanco: #ffffff;
+}
+
+@import "tailwindcss";
+
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #b1b875 0%, #949ec0 100%);
+  color: var(--color-texto);
+  background-color: #94addd;
+}
+
+/* Ajustar el padding superior del contenido para que no quede oculto debajo de la barra */
+.pagina-inicio {
+  padding-top: 5rem;  
+}
+
+/* ========== CLASES ========== */
+
+/* Página completa */
+.pagina-inicio {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1b2737 0%, #b8b378 100%);
+  overflow-x: hidden;
+  background-color: #1e1e2f;
+}
+
+/* Capa de símbolos flotantes */
+.simbolos-matematicos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none; 
+}
+
+/* Estilo de cada símbolo */
+.simbolo {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.15;
+  animation: flotar 20s infinite ease-in-out;
+  user-select: none;
+  font-weight: bold;
+}
+
+/* Diferentes animaciones para cada símbolo */
+.simbolo:nth-child(1) { top: 10%; left: 5%; animation-delay: 4s; font-size: 3rem; }
+.simbolo:nth-child(2) { top: 20%; left: 85%; animation-delay: 2s; font-size: 2.5rem; }
+.simbolo:nth-child(3) { top: 70%; left: 10%; animation-delay: 4s; font-size: 4rem; }
+.simbolo:nth-child(4) { top: 80%; left: 75%; animation-delay: 1s; font-size: 2rem; }
+.simbolo:nth-child(5) { top: 55%; left: 19%; animation-delay: 3s; font-size: 3.5rem; }
+.simbolo:nth-child(6) { top: 60%; left: 90%; animation-delay: 5s; font-size: 2.8rem; }
+.simbolo:nth-child(7) { top: 30%; left: 70%; animation-delay: 2.5s; font-size: 3rem; }
+.simbolo:nth-child(8) { top: 85%; left: 45%; animation-delay: 1.5s; font-size: 2.2rem; }
+.simbolo:nth-child(9) { top: 15%; left: 50%; animation-delay: 3.5s; font-size: 2.7rem; }
+.simbolo:nth-child(10) { top: 50%; left: 30%; animation-delay: 4.5s; font-size: 3.2rem; }
+.simbolo:nth-child(11) { top: 75%; left: 60%; animation-delay: 0.5s; font-size: 2.5rem; }
+.simbolo:nth-child(12) { top: 65%; right: 35%; animation-delay: 5.5s; font-size: 2.8rem; }
+.simbolo:nth-child(13) { top: 55%; left: 25%; animation-delay: 5.5s; font-size: 2.8rem; }
+.simbolo:nth-child(14) { top: 45%; left: 15%; animation-delay: 5.5s; font-size: 2.8rem; }
+.simbolo:nth-child(15) { top: 25%; left: 35%; animation-delay: 5.5s; font-size: 2.8rem; }
+.simbolo:nth-child(16) { top: 15%; left: 40%; animation-delay: 5.5s; font-size: 2.8rem; }
+.simbolo:nth-child(17) { top: 18%; left: 37%; animation-delay: 5.5s; font-size: 2.8rem; }
+
+/* Animación de flotación */
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+    opacity: 0.25;
+  }
+}
+
+/* Contenedor que organiza texto e imagen */
+.contenedor {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor {
+    flex-direction: row;
+  }
+}
+
+/* Lado del texto */
+.textos {
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .textos {
+    text-align: center;
+  }
+}
+
+/* Título principal */
+.titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1d1e33;
+  text-align: center;
+  border: 2px var(--color-primario-oscuro);
+}
+
+@media (min-width: 768px) {
+  .titulo {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .titulo {
+    font-size: 3rem;
+  }
+}
+
+/* Texto azul dentro del título */
+.titulo span {
+  display: block;
+  color: var(--color-primario-oscuro);
+  text-align: center;
+}
+
+/* Descripción */
+.descripcion {
+  font-size: 0.5rem;
+  color: var(--color-texto-claro);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .descripcion {
+    font-size: 1.25rem;
+  }
+}
+
+/* Botón principal */
+.boton {
+  display: inline-block;
+  background-color: var(--color-primario);
+  color: var(--blanco);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--color-primario) 0px 3px 5px;
+}
+/* 0 3px 5px rgba(0, 0, 0, 0.1) */
+.boton:hover {
+  background-color: var(--color-primario-oscuro);
+  transform: translateY(-2px);
+  box-shadow: var(--color-primario) 0px 6px 12px;
+}
+
+/* Lado de la imagen */
+.imagen {
+  flex: 1;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .imagen {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+.imagen-dentro {
+  object-fit: contain;
+}

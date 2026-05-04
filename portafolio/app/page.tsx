@@ -7,6 +7,8 @@ export default function Home() {
         nombre="Armando (yo)"
         materias={["Desarrollo web", "Optimizacion"]}
         evaluacion={100}
+        tags={["Programación", "Retos"]}
+        semestre="5, 7"
         imagen="/perfil1.jpg"
       />
     </div>

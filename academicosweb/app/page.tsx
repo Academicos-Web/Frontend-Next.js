@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import ComoFunciona from "./components/ComoFunciona";
-import ProfesoresMejorEvaluados from "./components/ProfesoresMejorEvaluados";
+import ComoFunciona from "../components/ComoFunciona";
+import ProfesoresMejorEvaluados from "../components/ProfesoresMejorEvaluados";
 import Header from "@/components/Header";
 import Inicio from "@/components/Inicio";
 import FiltroProfesores from "./Filtro/filtrosprofesores";
@@ -30,7 +30,6 @@ export default function FiltroPage() {
       
       <Header />
       <Inicio />
-      <h1>Inicio</h1>
 
       <Link href="/perfil">
         Ver perfil de profesor

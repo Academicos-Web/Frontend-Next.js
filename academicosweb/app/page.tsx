@@ -1,14 +1,10 @@
-import ComoFunciona from "./components/ComoFunciona";
-import ProfesoresMejorEvaluados from "./components/ProfesoresMejorEvaluados";
-import Header from "@/components/Header";
-import Inicio from "@/components/Inicio";
-import Link from "next/link";
-
-import ComoFunciona from "../components/ComoFunciona";
-import ProfesoresMejorEvaluados from "../components/ProfesoresMejorEvaluados";
+import ComoFunciona from "@/components/ComoFunciona";
+import ProfesoresMejorEvaluados from "@/components/ProfesoresMejorEvaluados";
 import Header from "@/components/Header";
 import Inicio from "@/components/Inicio";
 import FiltroProfesores from "./Filtro/filtrosprofesores";
+
+import Link from "next/link";
 
 type Profesor = {
   id: number;
@@ -27,7 +23,7 @@ export default function FiltroPage() {
   const [profesoresFiltrados, setProfesoresFiltrados] = useState<Profesor[]>(datosIniciales);
 
   return (
-    <main style={{ padding: "2rem", backgroundColor: "#f8fafc", minHeight: "100vh" }}>
+    <main style={{ padding: "0rem", backgroundColor: "#f8fafc", minHeight: "100vh" }}>
       
       <Header />
       <Inicio />

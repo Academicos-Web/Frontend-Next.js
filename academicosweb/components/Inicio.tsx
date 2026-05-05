@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -27,11 +25,11 @@ export default function Inicio() {
         <div className="simbolo">f(x)</div>
         <div className="simbolo">∞</div>
       </div>
-      <main className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center gap-12 px-6 py-24 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:py-32">
-        <div className="max-w-2xl text-center lg:text-left">
+      <main className="relative z-100 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center gap-12 px-6 py-24 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:py-32">
+        <div className="max-w-2xl text-center lg:text-left z-120">
            <Link
             href="/"
-            className="backdrop-blur-sm fixed top-4 left-4 z-50 inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-lg font-semibold text-[#a39b1e] shadow-lg shadow-indigo-500/20 transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:rotate-2 hover:bg-white/20 hover:text-indigo-100 motion-safe:transform-gpu"
+            className="backdrop-blur-sm fixed top-24 left-4 z-150 inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-lg font-semibold text-[#a39b1e] shadow-lg shadow-indigo-500/20 transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:rotate-2 hover:bg-white/20 hover:text-indigo-100 motion-safe:transform-gpu"
             >
               ∫ MAC dx
             </Link>

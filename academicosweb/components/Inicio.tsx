@@ -48,7 +48,7 @@ export default function Inicio() {
             Matemáticas Aplicadas y Computación
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-8 text-[#fbf7cb] text-slate-200 sm:text-base">
+          <p className="mt-6 max-w-xl text-base leading-8 text-[#fbf7cb] sm:text-base">
             Toma decisiones académicas informadas. Conoce el perfil profesional de tus profesores antes de inscribir materias.
           </p>
           <div className="flex justify-center">

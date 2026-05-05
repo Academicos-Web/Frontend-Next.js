@@ -1,3 +1,7 @@
 export default function Inicio() {
-  return <h1>Página Inicio</h1>;
+  return (
+    <main>
+      <h1>Inicio</h1>
+    </main>
+  );
 }

@@ -2,11 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import "./Header.css";
 
-export default function Header() {
+interface NavItem {
+  name: string;
+  path: string;
+}
+
+export default function Header(): JSX.Element {
   const pathname = usePathname();
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { name: "Inicio", path: "/inicio" },
     { name: "Directorio", path: "/directorio" },
     { name: "Comparador", path: "/comparador" },

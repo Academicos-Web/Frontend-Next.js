@@ -1,0 +1,137 @@
+.page {
+  background: #f9fafb;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sub {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* STEPS */
+.steps {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.done .circle {
+  background: var(--primary);
+  color: white;
+}
+
+/* MATERIAS */
+.materiasGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.materia {
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.activeBox {
+  border: 2px solid var(--primary);
+}
+
+/* PROFESORES */
+.selectorGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.card {
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* COMPARACIÓN */
+.comparacion {
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: var(--primary);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* 👇 LABELS EN AMBOS LADOS */
+.metricLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.metricRow {
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr;
+  align-items: center;
+}
+
+.sideLeft,
+.sideRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.barBox {
+  flex: 1;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  display: flex;
+}
+
+.barA {
+  background: var(--primary);
+  height: 100%;
+}
+
+.barB {
+  background: #fbbf24;
+  height: 100%;
+}
+
+.divider {
+  width: 2px;
+  height: 30px;
+  background: #d1d5db;
+  margin: auto;
+}

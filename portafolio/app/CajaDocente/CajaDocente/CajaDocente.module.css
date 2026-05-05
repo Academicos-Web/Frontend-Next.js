@@ -1,0 +1,76 @@
+/* Contenedor principal de la tarjeta */
+.card {
+  width: 350px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Encabezado: Foto y Nombre */
+.card-header {
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+.stars { color: #f1c40f; }
+.evals { font-size: 0.8rem; color: #666; display: block; }
+
+/* Cuerpo: Lista de materias y etiquetas */
+.card-body {
+  padding: 0 20px 20px;
+}
+
+.subjects {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background: #e8f0fe;
+  color: #1967d2;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+/* Pie de tarjeta */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+}

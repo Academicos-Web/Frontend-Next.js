@@ -1,4 +1,4 @@
-import CajaDocente from "./CajaDocente/CajaDocente/CajaDocente.js";
+import CajaDocente from "./CajaDocente/CajaDocente/CajaDocente";
 
 export default function Home() {
   return (

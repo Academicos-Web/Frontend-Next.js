@@ -1,4 +1,4 @@
-import styles from './CajaDocente/CajaDocente/CajaDocente.module.css';
+import styles from "./CajaDocente.module.css";
 
 interface CajaDocenteProps {
   nombre: string;

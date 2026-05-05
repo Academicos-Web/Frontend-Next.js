@@ -31,7 +31,10 @@ export default function FiltroPage() {
       
       <Header />
       <Inicio />
-
+      <h1>Inicio</h1>
+        <Link href="/comparador">
+        Comparador 
+        </Link>
       <Link href="/perfil">
         Ver perfil de profesor
       </Link>

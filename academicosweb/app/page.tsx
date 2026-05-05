@@ -1,6 +1,7 @@
-"use client";
-
-import { useState } from "react";
+import ComoFunciona from "./components/ComoFunciona";
+import ProfesoresMejorEvaluados from "./components/ProfesoresMejorEvaluados";
+import Header from "@/components/Header";
+import Inicio from "@/components/Inicio";
 import Link from "next/link";
 
 import ComoFunciona from "../components/ComoFunciona";

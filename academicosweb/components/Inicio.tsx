@@ -31,7 +31,7 @@ export default function Inicio() {
         <div className="max-w-2xl text-center lg:text-left">
            <Link
             href="/"
-            className="fixed top-4 left-4 z-50 inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-lg font-semibold text-[#a39b1e] shadow-lg shadow-indigo-500/20 transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:rotate-2 hover:bg-white/20 hover:text-indigo-100 motion-safe:transform-gpu"
+            className="backdrop-blur-sm fixed top-4 left-4 z-50 inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-lg font-semibold text-[#a39b1e] shadow-lg shadow-indigo-500/20 transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:rotate-2 hover:bg-white/20 hover:text-indigo-100 motion-safe:transform-gpu"
             >
               ∫ MAC dx
             </Link>
@@ -48,7 +48,7 @@ export default function Inicio() {
             Matemáticas Aplicadas y Computación
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-8 text-[#fbf7cb] text-slate-200 sm:text-base">
+          <p className="mt-6 max-w-xl text-base leading-8 text-[#fbf7cb] sm:text-base">
             Toma decisiones académicas informadas. Conoce el perfil profesional de tus profesores antes de inscribir materias.
           </p>
           <div className="flex justify-center">

@@ -1,0 +1,17 @@
+import CajaDocente from "./CajaDocente/CajaDocente/CajaDocente";
+
+export default function Home() {
+  return (
+    <div style={{ display: 'flex', gap: '20px', padding: '40px' }}>
+      <CajaDocente 
+        nombre="Armando (yo)"
+        materias={["Desarrollo web", "Optimizacion"]}
+        evaluacion={100}
+        tags={["Programación", "Retos"]}
+        semestre="5, 7"
+        imagen="/perfil1.jpg"
+      />
+    </div>
+  );
+}
+

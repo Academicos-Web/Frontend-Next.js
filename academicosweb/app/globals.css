@@ -68,7 +68,7 @@ button:hover {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  /* padding: 2rem 1.5rem; */
 }
 
 /* =========================
@@ -362,7 +362,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background: linear-gradient(135deg, #1b2737 0%, #b8b378 100%);
+  background: linear-gradient(135deg, #1b2737 0%, #788cb8 100%);
   overflow-x: hidden;
   background-color: #1e1e2f;
 }

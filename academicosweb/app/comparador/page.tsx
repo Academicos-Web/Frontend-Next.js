@@ -47,11 +47,9 @@ export default function ComparadorPage() {
   return (
     <div className={styles.page}>
       <div className="container">
-
         <h2>Comparador de Profesores</h2>
         <p className={styles.sub}>Sigue los pasos para comparar</p>
 
-        {/* PASOS CON CÍRCULOS */}
         <div className={styles.steps}>
           <div className={`${styles.step} ${materia ? styles.done : ""}`}>
             <div className={styles.circle}>1</div>
@@ -69,7 +67,6 @@ export default function ComparadorPage() {
           </div>
         </div>
 
-        {/* MATERIAS */}
         <div className={styles.section}>
           <h3>Materia a comparar</h3>
           <div className={styles.materiasGrid}>
@@ -85,7 +82,6 @@ export default function ComparadorPage() {
           </div>
         </div>
 
-        {/* PROFESORES */}
         {materia && (
           <div className={styles.selectorGrid}>
             <div>
@@ -118,10 +114,8 @@ export default function ComparadorPage() {
           </div>
         )}
 
-        {/* COMPARACIÓN */}
         {prof1 && prof2 && (
           <div className={styles.comparacion}>
-
             <div className={styles.header}>
               <div>{prof1.nombre} ⭐ {prof1.rating}</div>
               <div>VS</div>
@@ -134,15 +128,12 @@ export default function ComparadorPage() {
 
               return (
                 <div key={m.key} className={styles.metric}>
-
-                  {/* 👇 AHORA APARECE EN AMBOS LADOS */}
                   <div className={styles.metricLabels}>
                     <span>{m.label}</span>
                     <span>{m.label}</span>
                   </div>
 
                   <div className={styles.metricRow}>
-
                     <div className={styles.sideLeft}>
                       <span>{a}</span>
                       <div className={styles.barBox}>
@@ -161,21 +152,18 @@ export default function ComparadorPage() {
                           className={styles.barB}
                           style={{
                             width: `${porcentaje(b)}%`,
-                            marginLeft: "auto"
+                            marginLeft: "auto",
                           }}
                         />
                       </div>
                       <span>{b}</span>
                     </div>
-
                   </div>
                 </div>
               );
             })}
-
           </div>
         )}
-
       </div>
     </div>
   );

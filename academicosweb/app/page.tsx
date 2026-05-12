@@ -10,8 +10,6 @@ export default function FiltroPage() {
 
   return (
     <main style={{ padding: "0rem", backgroundColor: "#f8fafc", minHeight: "100vh" }}>
-      
-      <Header />
       <Inicio />
       <h1>Inicio</h1>
         <Link href="/comparador">

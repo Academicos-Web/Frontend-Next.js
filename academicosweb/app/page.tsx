@@ -13,7 +13,6 @@ export default function FiltroPage() {
       
       <Header />
       <Inicio />
-      <h1>Inicio</h1>
         <Link href="/comparador">
         Comparador 
         </Link>

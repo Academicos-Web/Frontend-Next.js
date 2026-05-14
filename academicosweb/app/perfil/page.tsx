@@ -1,4 +1,5 @@
 import styles from "./Perfil.module.css";
+import Image from "next/image";
 
 export default function Perfil() {
   return (
@@ -9,8 +10,13 @@ export default function Perfil() {
 
           {/* IZQUIERDA */}
           <div className={styles.card}>
-            <img src="/perfil.jpg" className={styles.avatar} />
-
+            <Image 
+           src="/perfil.jpg" 
+           alt="Foto de perfil de M.C. Sofía Castillo Navarro"
+           width={150}
+           height={150}
+           className={styles.avatar}
+           />
             <h2>M.C. Sofía Castillo Navarro</h2>
 
             <div className={styles.stars}>

@@ -1,7 +1,11 @@
+"use client";
+
 import styles from "./Perfil.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Perfil() {
+  const router = useRouter();
   return (
     <main className={styles.perfil}>
       <div className="container">
@@ -48,7 +52,17 @@ export default function Perfil() {
             <p className={styles.note}>
               Necesitas iniciar sesión para evaluar
             </p>
-          </div>
+
+            <button
+              className={styles.btn}
+              onClick={() => {
+                localStorage.removeItem('sesion');
+                localStorage.removeItem('tipoUsuario');
+                router.push('/login');
+              }}
+            >
+              Cerrar Sesión
+            </button>
 
           {/* DERECHA */}
           <div className={styles.content}>
@@ -147,6 +161,7 @@ export default function Perfil() {
 
         </div>
 
+      </div>
       </div>
     </main>
   );

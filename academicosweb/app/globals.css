@@ -124,7 +124,6 @@ button:hover {
 }
 
 /* CARD FLOTANTE */
-.inicio-partefinal .card {
 .inicio-partefinal .card-float {
   position: absolute;
   bottom: 20px;

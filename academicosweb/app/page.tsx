@@ -1,27 +1,50 @@
-import ComoFunciona from "@/components/ComoFunciona";
-import ProfesoresMejorEvaluados from "@/components/ProfesoresMejorEvaluados";
-import Header from "@/components/Header";
-import Inicio from "@/components/Inicio";
-import ProfesoresFiltrados from "@/components/ProfesoresFiltrados";
-
 import Link from "next/link";
 
+import Inicio from "@/components/Inicio";
+import ComoFunciona from "@/components/ComoFunciona";
+import ProfesoresMejorEvaluados from "@/components/ProfesoresMejorEvaluados";
+import ProfesoresFiltrados from "@/components/ProfesoresFiltrados";
+
+import InicioParteFinal from "./Inicio-partefinal/Inicio-partefinal";
+
 export default function FiltroPage() {
-
   return (
-    <main style={{ padding: "0rem", backgroundColor: "#f8fafc", minHeight: "100vh" }}>
+    <main
+      style={{
+        backgroundColor: "#f8fafc",
+        minHeight: "100vh",
+      }}
+    >
+      {/* HERO / INICIO */}
       <Inicio />
-      <h1>Inicio</h1>
-        <Link href="/comparador">
-        Comparador 
-        </Link>
-      <Link href="/perfil">
-        Ver perfil de profesor
-      </Link>
 
+      {/* LINKS RÁPIDOS */}
+      <section
+        style={{
+          display: "flex",
+          gap: "1rem",
+          justifyContent: "center",
+          padding: "1.5rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <Link href="/comparador">
+          Comparador
+        </Link>
+
+        <Link href="/perfil">
+          Ver perfil de profesor
+        </Link>
+      </section>
+
+      {/* SECCIONES */}
       <ComoFunciona />
+
       <ProfesoresMejorEvaluados />
+
       <ProfesoresFiltrados />
+
+      <InicioParteFinal />
     </main>
   );
 }

@@ -1,5 +1,8 @@
+"use client";
+
 import styles from "./PerfilAlumno.module.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // DATOS DE EJEMPLO - después vendrán de la BD
 const alumno = {
@@ -18,33 +21,6 @@ const alumno = {
       calificacion: 5,
       tags: ["Muy clara", "Ejercicios prácticos", "Accesible para dudas"],
     },
-    {
-      id: 2,
-      profesor: "Dr. Ramón Fuentes García",
-      materia: "Cálculo Diferencial",
-      semestre: "2025-1",
-      comentario: "Buen profesor aunque las clases son muy rápidas. Domina muy bien el tema pero a veces avanza demasiado.",
-      calificacion: 3,
-      tags: ["Dominio del tema", "Ritmo acelerado"],
-    },
-    {
-      id: 3,
-      profesor: "Mtro. Luis Herrera Mondragón",
-      materia: "Probabilidad",
-      semestre: "2024-2",
-      comentario: "Muy buen maestro, sus ejemplos son muy prácticos y explica de forma muy entretenida.",
-      calificacion: 4,
-      tags: ["Muy clara", "Entretenido"],
-    },
-    {
-      id: 4,
-      profesor: "Dra. Patricia Vega",
-      materia: "Álgebra Superior",
-      semestre: "2024-1",
-      comentario: "Exige bastante pero se aprende mucho. Muy puntual y organizada.",
-      calificacion: 4,
-      tags: ["Exigente", "Organizada"],
-    },
   ],
 };
 
@@ -61,6 +37,7 @@ function Estrellas({ cantidad }: { cantidad: number }) {
 }
 
 export default function PerfilAlumno() {
+  const router = useRouter();
   return (
     <main className={styles.perfil}>
       {/* ENCABEZADO */}
@@ -79,6 +56,16 @@ export default function PerfilAlumno() {
           <span className={styles.statNumero}>{alumno.totalReseñas}</span>
           <span className={styles.statLabel}>Reseñas dejadas</span>
         </div>
+        <button
+          className={styles.btnCerrarSesion}
+          onClick={() => {
+            localStorage.removeItem('sesion');
+            localStorage.removeItem('tipoUsuario');
+            router.push('/login');
+          }}
+        >
+          Cerrar Sesión
+        </button>
       </div>
 
       {/* RESEÑAS */}

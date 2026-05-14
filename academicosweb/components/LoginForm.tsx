@@ -1,8 +1,10 @@
 'use client';
 
-import { useState} from 'react';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LoginForm() {
+  const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -13,10 +15,21 @@ export default function LoginForm() {
     setLoading(true);
     setMessage('');
 
-    
+    // Usuario de prueba - reemplazar con BD real
+    const usuarioPrueba = {
+      numeroCuenta: '420012345',
+      password: '123456',
+    };
+
     setTimeout(() => {
-      
-      setMessage('Formulario visual - Conexión simulada');
+      if (username === usuarioPrueba.numeroCuenta && password === usuarioPrueba.password) {
+        // Guardar sesión (puedes usar localStorage o context)
+        localStorage.setItem('sesion', 'true');
+        localStorage.setItem('tipoUsuario', 'alumno'); // Para distinguir perfil
+        router.push('/perfil-alumno');
+      } else {
+        setMessage('Número de cuenta o contraseña incorrectos');
+      }
       setLoading(false);
       setUsername('');
       setPassword('');

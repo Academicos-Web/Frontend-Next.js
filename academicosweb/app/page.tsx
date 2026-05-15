@@ -1,22 +1,51 @@
-import ComoFunciona from "./components/ComoFunciona";
-import ProfesoresMejorEvaluados from "./components/ProfesoresMejorEvaluados";
 import Header from "@/components/Header";
 import Inicio from "@/components/Inicio";
 import Link from "next/link";
 
-export default function Home() {
-  return (
-    <main className="container">
-      <Header />
-      <Inicio />
-      <h1>Inicio</h1>
+import ComoFunciona from "@/components/ComoFunciona";
+import ProfesoresMejorEvaluados from "@/components/ProfesoresMejorEvaluados";
+import ProfesoresFiltrados from "@/components/ProfesoresFiltrados";
 
-      <Link href="/perfil">
-        Ver perfil de profesor 
+import InicioParteFinal from "./Inicio-partefinal/Inicio-partefinal";
+
+export default function FiltroPage() {
+  return (
+    <main
+      style={{
+        backgroundColor: "#f8fafc",
+        minHeight: "100vh",
+      }}
+    >
+      {/* HERO / INICIO */}
+      <Inicio />
+
+      {/* LINKS RÁPIDOS */}
+      <section
+        style={{
+          display: "flex",
+          gap: "1rem",
+          justifyContent: "center",
+          padding: "1.5rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <Link href="/comparador">
+          Comparador
         </Link>
+
+        <Link href="/perfil">
+          Ver perfil de profesor
+        </Link>
+      </section>
+
+      {/* SECCIONES */}
       <ComoFunciona />
+
       <ProfesoresMejorEvaluados />
+
+      <ProfesoresFiltrados />
+
+      <InicioParteFinal />
     </main>
   );
 }
-

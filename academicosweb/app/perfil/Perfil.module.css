@@ -1,0 +1,159 @@
+.perfil {
+  padding: 3rem 0;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+/* AVATAR */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* STARS */
+.stars {
+  color: #eab308;
+  font-size: 1.2rem;
+}
+
+.stars span {
+  color: #000;
+  margin-left: 5px;
+}
+
+/* TEXT */
+.small {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 1.2rem;
+  text-align: left;
+}
+
+.section h4 {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.section ul {
+  padding-left: 1rem;
+}
+
+/* BADGES */
+.badges span {
+  display: inline-block;
+  background: #1e3a8a;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 1rem;
+  padding: 12px;
+  background: #eab308;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 5px;
+}
+
+/* RIGHT */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.box {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* STATS */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.statHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.bar {
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.bar div {
+  background: #eab308;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* TAGS */
+.tags {
+  margin-top: 1rem;
+}
+
+.tags span {
+  background: #e2e8f0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+/* HEADER ROW */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LIGHT BUTTON */
+.btnLight {
+  background: #f1f5f9;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}

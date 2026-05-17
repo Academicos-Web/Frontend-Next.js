@@ -29,13 +29,6 @@ export default function FiltroPage() {
           flexWrap: "wrap",
         }}
       >
-        <Link href="/comparador">
-          Comparador
-        </Link>
-
-        <Link href="/perfil">
-          Ver perfil de profesor
-        </Link>
       </section>
 
       {/* SECCIONES */}

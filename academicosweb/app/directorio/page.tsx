@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import ProfesoresFiltrados from "@/components/ProfesoresFiltrados";
 
 const Estrellas = ({
   calificacion,
@@ -101,7 +102,7 @@ export default function Directorio() {
             </h2>
           </div>
         </div>
-
+        <ProfesoresFiltrados />
         {/* TARJETAS */}
         <div
           style={{

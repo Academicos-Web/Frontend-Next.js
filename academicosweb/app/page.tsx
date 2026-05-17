@@ -3,7 +3,6 @@ import Inicio from "@/components/Inicio";
 import Link from "next/link";
 import ComoFunciona from "@/components/ComoFunciona";
 import ProfesoresMejorEvaluados from "@/components/ProfesoresMejorEvaluados";
-import ProfesoresFiltrados from "@/components/ProfesoresFiltrados";
 import InicioParteFinal from "./Inicio-partefinal/Inicio-partefinal";
 
 export default function FiltroPage() {
@@ -33,8 +32,6 @@ export default function FiltroPage() {
       <ComoFunciona />
 
       <ProfesoresMejorEvaluados />
-
-      <ProfesoresFiltrados />
 
       <InicioParteFinal />
     </main>

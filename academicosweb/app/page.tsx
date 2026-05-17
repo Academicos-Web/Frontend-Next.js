@@ -1,6 +1,7 @@
+import Header from "@/components/Header";
+import Inicio from "@/components/Inicio";
 import Link from "next/link";
 
-import Inicio from "@/components/Inicio";
 import ComoFunciona from "@/components/ComoFunciona";
 import ProfesoresMejorEvaluados from "@/components/ProfesoresMejorEvaluados";
 import ProfesoresFiltrados from "@/components/ProfesoresFiltrados";

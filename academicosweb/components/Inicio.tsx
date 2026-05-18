@@ -34,15 +34,15 @@ export default function Inicio() {
               ∫ MAC dx
             </Link>
 
-          <h1 className="mt-10 text-4xl font-extrabold tracking-tight text-[#234661] sm:text-5xl lg:text-6xl"
+          <h1 className="mt-10 text-4xl font-extrabold tracking-tight text-[#D59F0F] sm:text-5xl lg:text-6xl"
           style={{ 
-              textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-              WebkitTextStroke: '2px #a39b1e'
+              textShadow: '2px 2px 4px #D59F0F(189, 176, 60, 0.88)',
+              WebkitTextStroke: '2px #7c704e'
                    }}>
           Plataforma de Evaluación Docente
           </h1>
 
-          <h1 className="mt-10 text-2xl font-extrabold tracking-tight text-[#a39b1e] sm:text-xl lg:text-2xl">
+          <h1 className="mt-10 text-2xl font-extrabold tracking-tight text-[#D59F0F] sm:text-xl lg:text-2xl">
             Matemáticas Aplicadas y Computación
           </h1>
 
@@ -64,7 +64,7 @@ export default function Inicio() {
             src="/FES_1.jpg"
             alt="Ilustración educativa"
             fill
-            sizes="(max-width: 800px) 100vw, 50vw"
+            sizes="(max-width: 1000px) 100vw, 50vw"
             className="object-cover"
           />
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
 const Estrellas = ({
@@ -85,22 +86,24 @@ export default function ProfesoresMejorEvaluados() {
   const [seleccionado, setSeleccionado] =
     useState<number | null>(null);
 
+  const router = useRouter();
+
   useEffect(() => {
-  const fetchProfesores = async () => {
-    const { data, error } = await supabase
-      .from("profesores")
-      .select("*");
+    const fetchProfesores = async () => {
+      const { data, error } = await supabase
+        .from("profesores")
+        .select("*");
 
-    console.log(data);
-    console.log(error);
+      console.log(data);
+      console.log(error);
 
-    if (data) {
-      setProfesores(data);
-    }
-  };
+      if (data) {
+        setProfesores(data);
+      }
+    };
 
-  fetchProfesores();
-}, []);
+    fetchProfesores();
+  }, []);
 
   const profesor =
     seleccionado !== null
@@ -119,7 +122,6 @@ export default function ProfesoresMejorEvaluados() {
           margin: "0 auto",
         }}
       >
-
         {/* HEADER */}
         <div
           style={{
@@ -188,10 +190,8 @@ export default function ProfesoresMejorEvaluados() {
               <div
                 key={p.id_profesor}
                 onClick={() =>
-                  setSeleccionado(
-                    seleccionado === index
-                      ? null
-                      : index
+                  router.push(
+                    `/perfil/${p.id_profesor}`
                   )
                 }
                 style={{
@@ -199,14 +199,20 @@ export default function ProfesoresMejorEvaluados() {
                     seleccionado === index
                       ? "2px solid #C9A84C"
                       : "1px solid #E5E7EB",
+
                   borderRadius: "16px",
+
                   padding: "24px",
+
                   backgroundColor: "white",
+
                   boxShadow:
                     seleccionado === index
                       ? "0 4px 16px rgba(201,168,76,0.15)"
                       : "0 1px 6px rgba(0,0,0,0.06)",
+
                   cursor: "pointer",
+
                   transition:
                     "all 0.2s ease",
                 }}
